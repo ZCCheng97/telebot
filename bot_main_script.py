@@ -35,7 +35,7 @@ def send_price(message):
     bot.send_message(message.chat.id, "No ticker found!")
 
 @bot.message_handler(func=chart_request)
-def send_price(message):
+def send_chart(message):
   request = message.text.split()[1].upper()
   try:
     chartRequest = finvizTest.chartUrl(request)
